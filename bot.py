@@ -38,8 +38,9 @@ SYSTEM_PROMPT = load_system_prompt()
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Обработчик команды /start."""
     await update.message.reply_text(
-        "Привет! Я бот для изучения английского.\n"
-        "Пришли мне английское слово или короткую фразу — и я дам подробный разбор."
+        "Hi! My name is Dicky and I'm your English assistant and cat obviously.\n"
+        "Send me a new word or a phrase and I will translate it for you.\n"
+        "I was created by @senatorous, send him my best regards by the way.\n"
     )
 
 
@@ -74,7 +75,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if len(user_text) > 80:
         await update.message.reply_text(
-            "Слишком длинно. Пришли одно слово или короткую фразу (до ~80 символов)."
+            "Too long, lad! I'm just a cat. Send me a word or phrase less than 80 characters."
         )
         return
 
@@ -86,7 +87,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         answer = await asyncio.to_thread(call_openai, user_text)
 
         if not answer:
-            answer = "Модель вернула пустой ответ. Попробуй другое слово."
+            answer = "Got an empty answer from model. Sad. Try another word."
 
         # Режем ответ по кускам, если он длинный
         for chunk in split_telegram(answer):
@@ -96,7 +97,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Логируем ошибку в консоль и отправляем пользователю
         print("Ошибка при вызове OpenAI:", repr(e))
         await update.message.reply_text(
-            f"Упс, что-то пошло не так: {type(e).__name__}: {e}"
+            f"Oops, an error: {type(e).__name__}: {e}"
         )
 
 
