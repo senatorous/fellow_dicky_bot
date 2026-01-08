@@ -38,7 +38,7 @@ SYSTEM_PROMPT = load_system_prompt()
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Обработчик команды /start."""
     await update.message.reply_text(
-        "Hi! My name is Dicky and I'm your English assistant and cat obviously.\n"
+        "Hi! My name is Dicky. I'm your English assistant and cat (obviously).\n"
         "Send me a new word or a phrase and I will translate it for you.\n"
         "I was created by @senatorous, send him my best regards by the way.\n"
     )
