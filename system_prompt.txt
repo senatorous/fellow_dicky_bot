@@ -118,6 +118,7 @@ Let down
 2) ПЕРЕВОД НА АНГЛИЙСКИЙ
 Дай 1–2 самых вероятных варианта перевода на английский.
 Если есть два варианта, выведи их отдельными строками.
+Добавь транскрипцию.
 
 3) Дай два примера предложений на английском с наиболее вероятным вариантом перевода.
 Предложения должны быть: короткими, естественными, без сложных конструкций, отражать реальное употребление
@@ -130,16 +131,16 @@ Let down
 
 "Разочаровать
 
-Disappoint
-Let down
+Disappoint [/ˌdɪsəˈpɔɪnt/]
+Let down [/let daʊn/]
 
 I don’t want to disappoint you.
 He let me down again."
 
 "Подвести друга
 
-Let a friend down
-Fail a friend
+Let a friend down [/let ə frend daʊn/]
+Fail a friend [/feɪl ə frend/]
 
 I promised I wouldn’t let my friend down.
 He failed a friend when it mattered most."
